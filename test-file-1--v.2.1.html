@@ -1,9 +1,11 @@
+
 <!doctype html>
 <html lang="en-US">
 <head>
 
   <meta charset="utf-8"/>
   <title></title>
+  <link rel="stylesheet" href="test-file-1.css">
 
 
 </head>
@@ -18,24 +20,21 @@
 
 let primeNumberLimit = prompt("Enter a number till witch we will iterate\
 all the prime numbers:");
+mainLoop:
 for (let i = 2; i <= primeNumberLimit; i++) {
-  for (let j = 2; j <= i; j++){
-    if (i % j === 0 && i % 1 === 0){
-      if ((i !== j) && i % j === 0){
-        break;
-      }
-      console.log(i);
+    for (let j = 2; j < i; j++){
+        if (i % j === 0){
+            continue mainLoop;
+        }
     }
-  }
+console.log(i);     
 }  
    
-        
-                           
-                       
-             
+                                     
+            
                      
    
-   
+ 
    
  
 
